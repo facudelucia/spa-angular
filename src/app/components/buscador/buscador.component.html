@@ -1,0 +1,15 @@
+<h1>Buscando a: <small>{{word}}</small></h1>
+
+
+<div *ngIf="search.length === 0" class="row">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{word}}
+    </div>
+  </div>
+</div>
+<div class="card-columns">
+    
+  <app-heroe-card  [heroe]="heroe" [idx]="heroe.idx" *ngFor="let heroe of search, let i = index"></app-heroe-card>
+      
+</div>
